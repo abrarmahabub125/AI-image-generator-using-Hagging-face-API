@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>AI Image generator</title>
+   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+   <!-- Font Awesome CDN-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <!-- Google Fonts - Poppins-->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="wraper">
+            <div class="content-box">
+                <div class="content-header">
+                    <div class="logo-container">
+                        <div class="logo">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h2>AI Image Generator</h2>
+                    </div>
+                    <button class="theme-toggle">
+                        <i class="fa-solid fa-sun" id="theme"></i>
+                    </button>
+                </div>
+                <div class="content-input">
+                    <form class="prompt-form" action="index.html">
+                        <div class="prompt-container">
+                            <div class="input-box">
+                                <textarea class="textarea" placeholder="Describe your imagination to generate image" required></textarea>
+                            </div>
+                            <div class="prompt-btn">
+                                <button><i class="fa-solid fa-robot"></i></button>
+                            </div>
+                        </div>
+                    
+                        <div class="option">
+                            <div class="select-wraper">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <select class="select" id="model-select">
+                                    <option value="Select Model" selected disabled>Select Model</option>
+                                    <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
+                                    <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
+                                    <option value="stabilityai/stable-diffusion-2">Stable-diffusion 2</option>
+                                    <option value="runwayml/stable-diffusion-v1-5">Stable diffusion v1-5</option>
+                                    <option value="promthero/openjourney">Open Journey</option>
+                                </select>
+                            </div>
+                            <div class="select-wraper">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <select class="select" id="count-select">
+                                    <option value="" selected disabled>Image Count</option>
+                                    <option value="1">1 Image</option>
+                                    <option value="2">2 Images</option>
+                                    <option value="3">3Images</option>
+                                    <option value="4">4 Images</option>
+                                    <option value="5">5 Images</option>
+
+                                </select>
+                            </div>
+                            <div class="select-wraper">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <select class="select" id="ratio-select">
+                                    <option value="" selected disabled>Aspect ratio</option>
+                                    <option value="1/1">Square</option>
+                                    <option value="16/9">Landscape</option>
+                                    <option value="9/16">Portrait</option>
+                                </select>
+                            </div>
+                            <button type="submit" id="generate-btn">
+                                <i class="fa-solid fa-wand-sparkles"></i>
+                                Generate
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="image-gallery">
+                        <div class="image-wraper">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
